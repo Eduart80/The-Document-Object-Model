@@ -49,8 +49,8 @@ formReg.addEventListener('click', (event) => {
         if (valid) {
             try{
             // localDB.push(`{'name':${userName.value}, 'email': ${userEmail.value}, 'password': ${userPassword.value}}`)
-            const saveLocal = JSON.stringify(`{'name':${userName.value}, 'email': ${userEmail.value}, 'password': ${userPassword.value}}`)
-            localStorage.setItem('userForm', saveLocal)
+            const userObj = { name: userName.value, email: userEmail.value, password: userPassword.value };
+            localStorage.setItem('userForm', JSON.stringify(userObj));
             alert(`Welcome to our Blog ${userName.value}!`)
             cleanUp()
             window.location.href = "blog.html";
