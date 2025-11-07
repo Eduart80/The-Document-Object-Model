@@ -11,3 +11,11 @@ body{
 .blog-post{
     background-color: rgb(219, 219, 247);
 }
+.card{
+    background-color: rgb(237, 237, 233);
+    border: 1px solid blue;
+    margin: 5px 5px;
+    color: black;
+    border-radius: 25px;
+    padding: 10px;
+}
