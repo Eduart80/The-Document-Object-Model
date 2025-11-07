@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/blogStyle.css">
+    <title>My Blog</title>
+</head>
+<body>
+    <a href="./index.html">Signup page</a>
+   <!-- A form with fields for a post title and post content (e.g., using <input type="text"> for title and <textarea> for content).
+Upon submission, the new post should be added to a list of posts displayed on the page.
+The form should be validated: both title and content are required.
+Display custom, user-friendly error messages if validation fails. -->
+
+<div class="container">
+    <div class="blog-posts">
+        <div class="newEntry">
+            <h3 class="user" id="userName"></h3>
+            <p id="userContent"></p>
+        </div>
+    </div>
+    <div class="blog-entry">
+        <form class="submit">
+            <label class="user-name" id="userName" >User name</label>
+            <textarea type="text" id="textArea"></textarea> 
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+    <script src="./JS/blogScript.js"></script>
+</body>
+</html>

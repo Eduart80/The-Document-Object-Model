@@ -53,6 +53,7 @@ formReg.addEventListener('click', (event) => {
             localStorage.setItem('userForm', saveLocal)
             alert(`Welcome to our Blog ${userName.value}!`)
             cleanUp()
+            window.location.href = "blog.html";
             }catch(e){
                 console.log('Local storage reading error: '+ e.message);
                 
