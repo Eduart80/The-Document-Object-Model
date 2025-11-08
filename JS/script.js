@@ -83,11 +83,13 @@ function checkValidation(inputElement, errorElement, isNameField = false) {
     errorElement.textContent = message;
     errorElement.style.display = message ? 'block' : 'none';
 }
+
 function cleanUp(){
     userName.value=''
     userEmail.value=''
     userPassword.value=''
     confirmPassword.value=''
 }
+
 
 

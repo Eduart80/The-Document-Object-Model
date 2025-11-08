@@ -2,8 +2,11 @@ body{
     margin:0;
     padding: 0;
 }
+.nav{
+    padding: 20px;
+}
 .container{
-    background-color: aquamarine;
+    background-color: rgb(234, 241, 239);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
@@ -18,4 +21,16 @@ body{
     color: black;
     border-radius: 25px;
     padding: 10px;
+}
+.submit-form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+    margin: 15px 0 15px 0;
+}
+.btn{
+    border-radius: 15px;
+    background-color: rgb(54, 54, 155);
+    color: bisque;
 }
