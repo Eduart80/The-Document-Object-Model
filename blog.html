@@ -10,18 +10,15 @@
     <div class="nav">
         <a href="./index.html">Signup page</a>
     </div>
-   <!-- A form with fields for a post title and post content (e.g., using <input type="text"> for title and <textarea> for content).
-Upon submission, the new post should be added to a list of posts displayed on the page.
-The form should be validated: both title and content are required.
-Display custom, user-friendly error messages if validation fails. -->
 
 <div class="container">
     <div class="blog-post">
         <div class="card" hidden>
             <div class="newEntry">
-                <h4 class="user" >From 
-                    <span id="blogName">My Name</span></h4>
+                <h4 class="user" >From:<span id="blogName"></span></h4>
             </div>
+            <span class="card-title"></span>
+            <span class="card-content"></span>
         </div>
     </div>
     <div class="blog-entry">
@@ -30,7 +27,7 @@ Display custom, user-friendly error messages if validation fails. -->
                 <span id="userName"></span>
             </label>
             <label class="tittle">Enter tittle</label>
-            <input class="user-tittle" required>
+            <input class="user-tittle" id="userTittle" required>
                 <span id="errorTittleMessage" hidden>This field is required</span>
             <textarea type="text" id="textArea" required></textarea> 
                 <span id="errorMessage" hidden>This field is required</span>

@@ -3,7 +3,7 @@ const cardContainer = document.getElementsByClassName('blog-post')[0]
 // [0] get the first card as a sample for all newcards
 const newCard = document.getElementsByClassName('card')[0]
 const userName = document.getElementById('userName')
-const userTittle = document.getElementById('textArea')
+const userTittle = document.getElementById('userTittle')
 const blogName = document.getElementById('blogName')
 const textArea = document.getElementById('textArea')
 const errorElement = document.getElementById('errorMessage')
@@ -40,12 +40,15 @@ for (let entry of blogEntry) {
                     contentSpan.className = 'card-content'
                     cloneCard.appendChild(contentSpan)
                 }
-                contentSpan.textContent = textFromUser 
-                contentSpan.textContent = inputTittle 
+                contentSpan.textContent = textFromUser
 
                 const blogNameInCard = cloneCard.querySelector('#blogName') // show the user name
                 if (blogNameInCard) {
-                    blogNameInCard.textContent = localName
+                    blogNameInCard.textContent = localName // name from localstorage
+                }
+                const titleElement = cloneCard.querySelector('.card-title') // show tittle
+                if (titleElement) {
+                    titleElement.textContent = inputTittle
                 }
                 cardContainer.appendChild(cloneCard)
                 cleanUp() //

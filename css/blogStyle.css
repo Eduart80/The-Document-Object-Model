@@ -22,6 +22,15 @@ body{
     border-radius: 25px;
     padding: 10px;
 }
+.card span {
+    display: flex;
+    flex-direction: column;
+
+}
+.newEntry h4{
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
 .submit-form{
     display: flex;
     flex-direction: column;
