@@ -3,6 +3,7 @@ const cardContainer = document.getElementsByClassName('blog-post')[0]
 // [0] get the first card as a sample for all newcards
 const newCard = document.getElementsByClassName('card')[0]
 const userName = document.getElementById('userName')
+const userTittle = document.getElementById('textArea')
 const blogName = document.getElementById('blogName')
 const textArea = document.getElementById('textArea')
 const errorElement = document.getElementById('errorMessage')
@@ -25,9 +26,10 @@ for (let entry of blogEntry) {
     entry.addEventListener('click', (event) => {
         event.preventDefault()
         if (event.target.classList.contains('btn')) {
-            if (validate(textArea, errorElement)) {// validate first
+            if (validate(textArea, userTittle, errorElement)) {// validate first
 
                 const textFromUser = textArea.value
+                const inputTittle = userTittle.value
                
                 const cloneCard = newCard.cloneNode(true) //clone
                 cloneCard.style.display = 'block'
@@ -39,6 +41,8 @@ for (let entry of blogEntry) {
                     cloneCard.appendChild(contentSpan)
                 }
                 contentSpan.textContent = textFromUser 
+                contentSpan.textContent = inputTittle 
+
                 const blogNameInCard = cloneCard.querySelector('#blogName') // show the user name
                 if (blogNameInCard) {
                     blogNameInCard.textContent = localName
@@ -51,10 +55,14 @@ for (let entry of blogEntry) {
 }
 function cleanUp(){
     textArea.value=''
+    userTittle.value=''
 }
-function validate(textArea, errorElement) {
+function validate(textArea, tittle, errorElement) {
     let message = ''
-    if (!textArea.value.trim()) {
+    if (!tittle.value.trim()) {
+        message = 'This field is required'
+    } 
+    else if (!textArea.value.trim()) {
         message = 'This field is required'
     } 
     errorElement.textContent = message
