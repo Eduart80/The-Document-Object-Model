@@ -8,8 +8,6 @@ const userTittle = document.getElementById('userTitle')
 const blogName = document.getElementById('blogName')
 const textArea = document.getElementById('textArea')
 const errorElement = document.getElementById('errorMessage')
-const btnDelete = document.getElementById('delete-post')
-const editCard = document.getElementById('edit-post')
 
 let localName=[]
 //read
@@ -61,7 +59,7 @@ for (let entry of blogEntry) {
                 let contentSpan = cloneCard.querySelector('.card-content') // clone elements
 
                 if (!contentSpan) {
-                    contentSpan = document.createElement('span')
+                    contentSpan = document.createElement('span') // create element
                     contentSpan.className = 'card-content'
                     cloneCard.appendChild(contentSpan)
                 }
@@ -123,13 +121,19 @@ function loadAllCardsFromLocalStorage() {
     }
 }
 loadAllCardsFromLocalStorage()
-/// Update
-editCard.addEventListener('click',(event)=>{
-     if (event.target.classList.contains('btn-edit')) {
+
+/// Updatel
+cardContainer.addEventListener('click', (event) => {
+    if (event.target.classList.contains('btn-edit')) {
         const card = event.target.closest('.card')
         if (card) {
             const key = card.getAttribute('data-key')
             if (key) {
+                const data = JSON.parse(localStorage.getItem(key))
+                if (data) {
+                    userTittle.value = data.title
+                    textArea.value = data.texarea
+                }
                 localStorage.removeItem(key)
             }
             card.remove()

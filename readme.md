@@ -1,6 +1,6 @@
 # Document Object Model
 
-App MyBlog. 
+Wlcome to MyBlog app. 
 Programming language: HTML, CSS, JavaScript
 
 Signup page instruction: 
@@ -9,7 +9,7 @@ Enter user name, email, and create a new password, and then re-enter the same pa
 The data will be saved on local storage. After confirmation, the user will be redirected to a blog page.<br>
 On the right side, the user has an input area to enter the text of choice.<br>
 The tag From: will be populated by the user name that you entered in the signup form.<br>
-This data (name) will be retrieved from local storage.
+This data (name) will be retrieved from local storage. Then youu have to put a title an write inside the texarea.
 ### CRUD 
 ### Create 
 Users have an input field to enter the title and a text area to write any remarks. On the submit button,
@@ -23,4 +23,7 @@ User is able to edit the text are and update the local storage with this new dat
 User Have the option to delete, and update the text content
 Delete will remove it from the list of cards, and data on localstorage
 
+### A reflection on your development process, challenges faced, and how you overcame them.
+The work process was good at the point of JavaScript logic kicked in to create a full CRUD function.
+It was tough to be honest
  

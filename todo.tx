@@ -1,5 +1,0 @@
-Edit Posts:
-
-Clicking “Edit” should allow the user to modify the title and content of that specific post. This might involve populating the main form (or a modal form) with the existing post data.
-After editing, the updated post should be reflected in the display.
-Form validation should also apply during editing.
