@@ -27,6 +27,15 @@ body{
     flex-direction: column;
 
 }
+input:required, textarea:required {
+  border: 1px solid rgb(255, 68, 0);
+}
+input:valid, textarea:valid {
+  border: 1px solid green;
+}
+input:focus:invalid, textarea:focus:invalid {
+  outline: none; 
+}
 .newEntry h4{
     margin-top: 5px;
     margin-bottom: 3px;
