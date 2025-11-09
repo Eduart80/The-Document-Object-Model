@@ -1,0 +1,9 @@
+Edit Posts:
+Each displayed post should have an “Edit” button.
+Clicking “Edit” should allow the user to modify the title and content of that specific post. This might involve populating the main form (or a modal form) with the existing post data.
+After editing, the updated post should be reflected in the display.
+Form validation should also apply during editing.
+
+Delete Posts:
+Each displayed post should have a “Delete” button.
+Clicking “Delete” should remove the post from the display and from localStorage.
