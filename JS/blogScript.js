@@ -23,7 +23,6 @@ function readFromLocalStorage(inputReq){
 readFromLocalStorage('userForm')
 userName.innerHTML=localName.name
 
-
 //create
 function saveToLocalStorage(){
     try {
@@ -43,9 +42,6 @@ function saveToLocalStorage(){
     }
 }
 
-
-
-
 //update
 function updateToLocalStorage(){
     try{
@@ -56,8 +52,6 @@ function updateToLocalStorage(){
         console.log(e.message);
     }   
 }
-
-
 
 // new card
 // POST
