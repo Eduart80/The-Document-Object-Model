@@ -9,6 +9,7 @@ const blogName = document.getElementById('blogName')
 const textArea = document.getElementById('textArea')
 const errorElement = document.getElementById('errorMessage')
 const btnDelete = document.getElementById('delete-post')
+const editCard = document.getElementById('edit-post')
 
 let localName=[]
 //read
@@ -40,17 +41,6 @@ function saveToLocalStorage(){
         console.log(e.message)
         return null
     }
-}
-
-//update
-function updateToLocalStorage(){
-    try{
-        const readLocal = localStorage.getItem('userForm')
-        const parseInfo = JSON.parse(readLocal)
-        localName = parseInfo.name
-    }catch(e){
-        console.log(e.message);
-    }   
 }
 
 // new card
@@ -133,7 +123,19 @@ function loadAllCardsFromLocalStorage() {
     }
 }
 loadAllCardsFromLocalStorage()
-
+/// Update
+editCard.addEventListener('click',(event)=>{
+     if (event.target.classList.contains('btn-edit')) {
+        const card = event.target.closest('.card')
+        if (card) {
+            const key = card.getAttribute('data-key')
+            if (key) {
+                localStorage.removeItem(key)
+            }
+            card.remove()
+        }
+    }
+})
 function cleanUp(){
     textArea.value=''
     userTittle.value=''
