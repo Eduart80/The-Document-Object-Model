@@ -114,10 +114,16 @@ function loadAllCardsFromLocalStorage() {
 
         if (key && key.startsWith('userBlog')) {
             const data = JSON.parse(localStorage.getItem(key))
-            console.log(data)
-            
         
-            }    
+           let cantentSpan = data.texarea
+           console.log(cantentSpan);
+            
+        let blogName = data.name
+           console.log(blogName);
+               
+        let blogTitle = data.title
+           console.log(blogTitle);
+        }    
     }
 }
 loadAllCardsFromLocalStorage()
