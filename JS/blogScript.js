@@ -114,15 +114,21 @@ function loadAllCardsFromLocalStorage() {
 
         if (key && key.startsWith('userBlog')) {
             const data = JSON.parse(localStorage.getItem(key))
-        
-           let cantentSpan = data.texarea
-           console.log(cantentSpan);
+            const cloneCard = newCard.cloneNode(true)
+            cloneCard.style.display ='block'
+            cloneCard.setAttribute('data-key',key)
+
+            let conetntSpan = cloneCard.querySelector('.card-content')
+            conetntSpan.textContent = data.texarea
             
-        let blogName = data.name
-           console.log(blogName);
-               
-        let blogTitle = data.title
-           console.log(blogTitle);
+            let userName = cloneCard.querySelector('#blogName')
+            userName.textContent = data.name
+            
+            let titleElement = cloneCard.querySelector('.card-title');
+            if (titleElement) {
+                titleElement.textContent = data.title; 
+            }
+            cardContainer.appendChild(cloneCard)
         }    
     }
 }
