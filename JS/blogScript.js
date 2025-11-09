@@ -107,6 +107,21 @@ cardContainer.addEventListener('click', (event)=> {
     }
 })
 
+// after reload page
+function loadAllCardsFromLocalStorage() {
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i)
+
+        if (key && key.startsWith('userBlog')) {
+            const data = JSON.parse(localStorage.getItem(key))
+            console.log(data)
+            
+        
+            }    
+    }
+}
+loadAllCardsFromLocalStorage()
+
 function cleanUp(){
     textArea.value=''
     userTittle.value=''

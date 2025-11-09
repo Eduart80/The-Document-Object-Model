@@ -14,5 +14,9 @@ Users have an input field to enter the title and a text area to write any remark
 a new card will be created, with the user name, title, and the text.
 The user will be able to create new cards on every click of the submit button.
 
+User Have the option to delete, and update the text content
+Delete will remove it from the list of cards, and data on localstorage
+
+
 
  
